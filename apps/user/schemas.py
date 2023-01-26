@@ -11,3 +11,12 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     password: str
+
+
+class UserDelete(BaseModel):
+    id: int
+
+
+class UserDeleteResponse(UserDelete):
+    deleted: bool
+    detail: dict | None
