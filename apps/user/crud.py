@@ -22,7 +22,17 @@ def create_user(db: Session, user: schemas.UserCreate) -> models.User:
     db.add(db_user)
     db.commit()
     db.refresh(db_user)
+    db.commit()
     return db_user
+
+
+def delete_user_by_id(db: Session, user_id: int) -> bool:
+    db_user = db.get(models.User, {'id': user_id})
+    if db_user is None:
+        return False
+    db.delete(db_user)
+    db.commit()
+    return True
 
 
 def is_password_valid(user: models.User, check_password: str) -> bool:
