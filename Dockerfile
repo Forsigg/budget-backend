@@ -9,7 +9,6 @@ RUN apk update && apk add --update --no-cache --progress \
     bash \
     openssl \
     && apk add --no-cache --virtual=.build-dependencies \
-    build-base.py \
     python3-dev \
     && wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSION/dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
     && tar -C /usr/local/bin -xzvf dockerize-alpine-linux-amd64-$DOCKERIZE_VERSION.tar.gz \
