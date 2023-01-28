@@ -20,3 +20,13 @@ class UserDelete(BaseModel):
 class UserDeleteResponse(UserDelete):
     deleted: bool
     detail: dict | None
+
+
+class TokenSchema(BaseModel):
+    access_token: str
+    refresh_token: str
+
+
+class TokenPayload(BaseModel):
+    sub: str
+    exp: float
