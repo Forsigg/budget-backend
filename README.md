@@ -6,7 +6,7 @@ Requirements: Docker, any version of Python.
 
 1. Clone repo `git clone https://github.com/Forsigg/budget-backend`
 
-2. Create .env file `python ./scripts/create_dot_env.py` or `python3 ./scripts/create_dot_env.py`
+2. Create .env file `cp example.env .env`
 
 3. Set up environment variable in env.py
 
